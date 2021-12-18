@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import { useMoralis } from "react-moralis";
@@ -5,7 +6,16 @@ import { useMoralis } from "react-moralis";
 const Login = () => {
   const { authenticate } = useMoralis();
   return (
-    <div className="bg-black relative text-white">
+    <div className="bg-black relative text-white font-bold">
+      <Head>
+        <title>MetaChat</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div class="text-5xl font-extrabold  absolute bottom-52 z-50 w-screen text-center">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-fuchsia-300 to-cyan-500">
+          Welcome to MetaChat
+        </span>
+      </div>
       <div className="flex flex-col absolute z-50 h-4/6 items-center justify-center w-full space-y-4">
         <Image
           src="https://i.imgur.com/WYAjt3T.jpeg"
